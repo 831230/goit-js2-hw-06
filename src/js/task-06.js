@@ -9,7 +9,7 @@ function checkLongValueInput() {
     return
   }
   $input.classList.remove("valid");
-  $input.classList.add("invalid")
-}
+  $input.classList.add("invalid");
+};
 
 $input.addEventListener("blur",checkLongValueInput);
