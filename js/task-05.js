@@ -1,12 +1,12 @@
-const $input=document.getElementById("name-input");
-const $spanResult=document.getElementById("name-output");
+const input=document.getElementById("name-input");
+const spanResult=document.getElementById("name-output");
 
 function insertNameToSpan() {
-  if (!$input.value) {
-    $spanResult.textContent="Anonymous";
+  if (!input.value) {
+    spanResult.textContent="Anonymous";
     return
   };
-  $spanResult.textContent=$input.value
+  spanResult.textContent=input.value
 };
 
-$input.addEventListener("input", insertNameToSpan);
+input.addEventListener("input", insertNameToSpan);

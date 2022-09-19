@@ -13,18 +13,26 @@ const images = [
   },
 ];
 
-const $ulGallery=document.querySelector(".gallery");
-const fragment=document.createDocumentFragment();
+const ulGallery=document.querySelector(".gallery");
 
 images.forEach(img => {
-  const liElement=document.createElement("li");
-  liElement.classList="gallery__item";
-  const imgElement=document.createElement("img");
-  imgElement.classList="gallery__image";
-  imgElement.setAttribute("src", img.url);
-  imgElement.setAttribute("alt", img.alt);
-  liElement.append(imgElement);
-  fragment.append(liElement);
+  const stringToHtml=`<li class="gallery__item"><img class="gallery__image" src="${img.url}" alt="${img.alt}"></img></li>`;
+  ulGallery.insertAdjacentHTML("afterbegin",stringToHtml);
 });
 
-$ulGallery.append(fragment);
+
+// const fragment=document.createDocumentFragment();
+
+// images.forEach(img => {
+//   const liElement=document.createElement("li");
+//   liElement.classList="gallery__item";
+//   const imgElement=document.createElement("img");
+//   imgElement.classList="gallery__image";
+//   imgElement.setAttribute("src", img.url);
+//   imgElement.setAttribute("alt", img.alt);
+//   liElement.append(imgElement);
+//   fragment.append(liElement);
+// });
+
+// $ulGallery.append(fragment);
+

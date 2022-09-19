@@ -7,7 +7,7 @@ const ingredients = [
   'Condiments',
 ];
 
-const $ulIngredients=document.getElementById("ingredients");
+const ulIngredients=document.getElementById("ingredients");
 const fragment=document.createDocumentFragment();
 
 ingredients.forEach(ingredient => {
@@ -17,4 +17,4 @@ ingredients.forEach(ingredient => {
   fragment.append(liElement);
 });
 
-$ulIngredients.append(fragment)
+ulIngredients.append(fragment)
